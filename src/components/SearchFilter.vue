@@ -1,13 +1,11 @@
 <template>
     <div class="w-full bg-white px-4 py-3 rounded-b-xl shadow-md md:rounded-none sticky top-16 bg-white z-10">
         <div class="w-full">
-
             <!-- DESKTOP -->
             <div class="hidden md:flex items-center gap-3 flex-wrap ">
-                <!-- Search -->
                 <div class="relative flex items-center flex-1 min-w-[200px] bg-sky-700/10 rounded-full">
                     <input type="text" placeholder="Search Place"
-                        class="w-full border-2 border-sky-700 rounded-full pl-4 pr-10 py-2 text-sm focus:outline-none" />
+                        class="w-full border-2 border-black rounded-full pl-4 pr-10 py-2 text-sm focus:outline-none focus:border-sky-700" />
                     <button class="absolute right-1.5 bg-sky-700 p-1 rounded-full">
                         <svg xmlns="www.w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -18,9 +16,9 @@
                 </div>
 
                 <div
-                    class=" relative  border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer">
+                    class=" relative cursor-pointer">
                     <button @click="toggleDropdown('For Sale')"
-                        class="hover:text-sky-700 flex items-center gap-1 cursor-pointer">For Sale
+                         class="hover:text-sky-700 flex items-center gap-1 cursor-pointer border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700">For Sale
                         <svg v-if="activeDropdown === 'For Sale'" class="ml-5" id='Arrow_Button_Up_2_24' width='10'
                             height='10' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
                             xmlns:xlink='http://www.w3.org/1999/xlink'>
@@ -49,16 +47,16 @@
                     </button>
                     <div v-show="activeDropdown === 'For Sale'"
                         class="absolute top-11 left-0 transition w-full z-10 flex flex-col gap-1 bg-white w-25 px-2 py-1 shadow-lg rounded-sm">
-                        <p> For Sale 1</p>
-                        <p> For Sale 2</p>
-                        <p> For Sale 3</p>
+                        <p class="hover:text-sky-700"> For Sale 1</p>
+                        <p class="hover:text-sky-700"> For Sale 2</p>
+                        <p class="hover:text-sky-700"> For Sale 3</p>
                     </div>
-                </div>   
+                </div>
 
                 <div
-                    class=" relative border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer">
+                    class=" relative cursor-pointer">
                     <button @click="toggleDropdown('Price')"
-                        class="hover:text-sky-700 flex items-center gap-1 cursor-pointer">Price
+                        c class="hover:text-sky-700 flex items-center gap-1 cursor-pointer border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700">Price
                         <svg v-if="activeDropdown === 'Price'" class="ml-5" id='Arrow_Button_Up_2_24' width='10'
                             height='10' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
                             xmlns:xlink='http://www.w3.org/1999/xlink'>
@@ -87,16 +85,16 @@
                     </button>
                     <div v-show="activeDropdown === 'Price'"
                         class="absolute top-11 left-0 transition z-10 flex flex-col gap-1 bg-white w-25 px-2 py-1 shadow-lg rounded-sm">
-                        <p> Price 1</p>
-                        <p> Price 2</p>
-                        <p> Price 3</p>
+                        <p class="hover:text-sky-700"> Price 1</p>
+                        <p class="hover:text-sky-700"> Price 2</p>
+                        <p class="hover:text-sky-700"> Price 3</p>
                     </div>
                 </div>
 
                 <div
-                    class=" relative border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer">
+                    class=" relative cursor-pointer">
                     <button @click="toggleDropdown('Beds & Baths')"
-                        class="hover:text-sky-700 flex items-center gap-1 cursor-pointer">Beds & Baths
+                        class="hover:text-sky-700 flex items-center gap-1 cursor-pointer border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700">Beds & Baths
                         <svg v-if="activeDropdown === 'Beds & Baths'" class="ml-5" id='Arrow_Button_Up_2_24' width='10'
                             height='10' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
                             xmlns:xlink='http://www.w3.org/1999/xlink'>
@@ -125,16 +123,16 @@
                     </button>
                     <div v-show="activeDropdown === 'Beds & Baths'"
                         class="absolute top-11 left-0 transition w-full z-10 flex flex-col gap-1 bg-white w-25 px-2 py-1 shadow-lg rounded-sm">
-                        <p> Beds & Baths 1</p>
-                        <p> Beds & Baths 2</p>
-                        <p> Beds & Baths 3</p>
+                        <p class="hover:text-sky-700"> Beds & Baths 1</p>
+                        <p class="hover:text-sky-700"> Beds & Baths 2</p>
+                        <p class="hover:text-sky-700"> Beds & Baths 3</p>
                     </div>
                 </div>
 
-                               <div
-                    class=" relative border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer">
+                <div class=" relative cursor-pointer">
                     <button @click="toggleDropdown('Property Type')"
-                        class="hover:text-sky-700 flex items-center gap-1 cursor-pointer">Property Type
+                        class="hover:text-sky-700 flex items-center gap-1 cursor-pointer border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700">Property
+                        Type
                         <svg v-if="activeDropdown === 'Property Type'" class="ml-5" id='Arrow_Button_Up_2_24' width='10'
                             height='10' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'
                             xmlns:xlink='http://www.w3.org/1999/xlink'>
@@ -163,15 +161,14 @@
                     </button>
                     <div v-show="activeDropdown === 'Property Type'"
                         class="absolute top-11 left-0 transition w-full z-10 flex flex-col gap-1 bg-white w-25 px-2 py-1 shadow-lg rounded-sm">
-                        <p> Property Type 1</p>
-                        <p> Property Type 2</p>
-                        <p> Property Type 3</p>
+                        <p class="hover:text-sky-700"> Property Type 1</p>
+                        <p class="hover:text-sky-700"> Property Type 2</p>
+                        <p class="hover:text-sky-700"> Property Type 3</p>
                     </div>
                 </div>
 
-                <!-- Filters -->
                 <button
-                    class="flex items-center gap-2 border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer">
+                    class="flex items-center gap-2 border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer hover:text-sky-700">
                     <svg id='adjustments-horizontal_20' width='20' height='20' viewBox='0 0 20 20'
                         xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
                         <rect width='20' height='20' stroke='none' fill='#000000' opacity='0' />
@@ -234,13 +231,11 @@
                     </svg> Filters
                 </button>
 
-                <!-- Saved -->
                 <button
-                    class="flex items-center gap-2 border border-gray-400 rounded-full px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer">
+                    class="flex items-center gap-2 border border-gray-400 rounded-full px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer hover:text-sky-700">
                     <svg id='Pencil_20' width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'
                         xmlns:xlink='http://www.w3.org/1999/xlink'>
                         <rect width='20' height='20' stroke='none' fill='#000000' opacity='0' />
-
 
                         <g transform="matrix(1.3 0 0 1.3 10 10)">
                             <path
@@ -255,10 +250,9 @@
 
             <!-- MOBILE -->
             <div class="flex md:hidden items-center gap-2">
-                <!-- Search -->
                 <div class="relative flex items-center w-full bg-sky-700/10 rounded-full">
                     <input type="text" placeholder="Search Place"
-                        class="w-full border-2 border-sky-700 rounded-full pl-4 pr-10 py-2 text-sm focus:outline-none" />
+                        class="w-full border-2 focus:border-sky-700 rounded-full pl-4 pr-10 py-2 text-sm focus:outline-none" />
                     <button class="absolute right-1.5 bg-sky-700 p-1 rounded-full">
                         <svg xmlns="www.w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -268,9 +262,9 @@
                     </button>
                 </div>
 
-                <!-- Filter Icon -->
+
                 <button class="border-2 rounded-full border-sky-700 p-2 relative">
-                      <svg id='adjustments-horizontal_20' width='20' height='20' viewBox='0 0 20 20'
+                    <svg id='adjustments-horizontal_20' width='20' height='20' viewBox='0 0 20 20'
                         xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
                         <rect width='20' height='20' stroke='none' fill='#000000' opacity='0' />
 
@@ -336,7 +330,6 @@
                 </button>
             </div>
 
-            <!-- MOBILE SECOND ROW -->
             <div class="flex md:hidden gap-2 mt-3">
                 <div
                     class=" relative  border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer">
@@ -374,7 +367,7 @@
                         <p> For Sale 2</p>
                         <p> For Sale 3</p>
                     </div>
-                </div>   
+                </div>
 
                 <div
                     class=" relative border border-gray-400 rounded-md px-4 py-2 text-sm hover:bg-sky-700/5 hover:border-sky-700 cursor-pointer">

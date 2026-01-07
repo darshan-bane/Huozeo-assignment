@@ -1,7 +1,6 @@
 <template>
     <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl cursor-pointer duration-100 ease-in">
 
-        <!-- Image -->
         <div class="relative">
             <img src="/src/assets/images/card/card-img.png" class="w-full h-48 object-cover" />
 
@@ -29,7 +28,7 @@
             </button>
         </div>
 
-        <!-- Content -->
+
         <div class="p-4">
             <div class="flex justify-between gap-1">
                 <div

@@ -2,12 +2,11 @@
   <header class="w-full border-b border-gray-200 sticky top-0 bg-white z-20">
 
     <div class="hidden md:flex items-center justify-between px-6 py-4 w-full">
-      <!-- Left: Logo -->
+
       <div class="flex items-center gap-2">
         <img src="/src/assets/images/navbar/houzeo_logo.png" alt="Houzeo" class="h-8" />
       </div>
 
-      <!-- Center: Navigation -->
       <nav class="flex items-center flex-wrap justify-center gap-6 text-sm font-medium text-gray-700">
         <div class="relative">
           <button @click="toggleDropdown('product')"
@@ -39,14 +38,15 @@
           </button>
           <div v-show="activeDropdown === 'product'"
             class="absolute top-8 transition z-10 flex flex-col gap-1 bg-white w-25 px-2 py-1 shadow-lg rounded-sm">
-            <p> Product 1</p>
-            <p> Product 2</p>
-            <p> Product 3</p>
+            <p class="hover:text-sky-700 cursor-pointer"> Product 1</p>
+            <p class="hover:text-sky-700 cursor-pointer"> Product 2</p>
+            <p class="hover:text-sky-700 cursor-pointer"> Product 3</p>
           </div>
         </div>
 
         <a href="#" class="hover:text-sky-700"">How Houzeo Works</a>
         <a href=" #" class="hover:text-sky-700"">Reviews</a>
+        
        <div class=" relative">
           <button @click="toggleDropdown('buy')" class="hover:text-sky-700 flex items-center gap-1 cursor-pointer">Buy
             <svg v-if="activeDropdown === 'buy'" id='Arrow_Button_Up_2_24' width='12' height='12' viewBox='0 0 24 24'
@@ -76,11 +76,12 @@
           </button>
           <div v-show="activeDropdown === 'buy'"
             class="absolute top-8 transition z-10 flex flex-col gap-1 bg-white w-25 px-2 py-1 shadow-lg rounded-sm">
-            <p> Buy 1</p>
-            <p> Buy 2</p>
-            <p> Buy 3</p>
+            <p class="hover:text-sky-700 cursor-pointer"> Buy 1</p>
+            <p class="hover:text-sky-700 cursor-pointer"> Buy 2</p>
+            <p class="hover:text-sky-700 cursor-pointer"> Buy 3</p>
           </div>
     </div>
+
     <div class="relative">
       <button @click="toggleDropdown('sell')" class="hover:text-sky-700 flex items-center gap-1 cursor-pointer">Sell
         <svg v-if="activeDropdown === 'sell'" id='Arrow_Button_Up_2_24' width='12' height='12' viewBox='0 0 24 24'
@@ -110,12 +111,14 @@
       </button>
       <div v-show="activeDropdown === 'sell'"
         class="absolute top-8 transition z-10 flex flex-col gap-1 bg-white w-25 px-2 py-1 shadow-lg rounded-sm">
-        <p> Sell 1</p>
-        <p> Sell 2</p>
-        <p> Sell 3</p>
+        <p class="hover:text-sky-700 cursor-pointer"> Sell 1</p>
+        <p class="hover:text-sky-700 cursor-pointer"> Sell 2</p>
+        <p class="hover:text-sky-700 cursor-pointer"> Sell 3</p>
       </div>
     </div>
+
     <a href=" #" class="hover:text-sky-700"">Pricing</a>
+
       <div class=" relative">
       <button @click="toggleDropdown('resource')"
         class="hover:text-sky-700 flex items-center gap-1 cursor-pointer">Resource
@@ -146,11 +149,12 @@
       </button>
       <div v-show="activeDropdown === 'resource'"
         class="absolute top-8 transition z-10 flex flex-col gap-1 bg-white w-25 px-2 py-1 shadow-lg rounded-sm">
-        <p> Resource 1</p>
-        <p> Resource 2</p>
-        <p> Resource 3</p>
+        <p class="hover:text-sky-700 cursor-pointer"> Resource 1</p>
+        <p class="hover:text-sky-700 cursor-pointer"> Resource 2</p>
+        <p class="hover:text-sky-700 cursor-pointer"> Resource 3</p>
       </div>
       </div>
+
       <a href=" #" class="text-gray-600 hover:text-sky-700"">Sign In</a>
 
         <div class=" text-gray-600 text-xs">
@@ -159,7 +163,6 @@
         </div>
         </nav>
 
-        <!-- Right: Actions -->
         <div class="flex items-center gap-4 text-sm">
           <button class=" bg-gradient-to-r from-sky-600 to-sky-800
     hover:from-sky-500 hover:to-sky-700 text-white px-4 py-2 rounded-md transition cursor-pointer">
@@ -170,23 +173,19 @@
 
         <!-- Mobile Header -->
         <div class="flex md:hidden items-center justify-between px-4 py-3 sticky top-0 bg-white z-20">
-          <!-- Hamburger -->
-          <button class="p-2">
+
+          <button class="p-2" @click="isMobileMenuOpen = !isMobileMenuOpen">
             <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
 
-          <!-- Logo -->
           <img src="/src/assets/images/navbar/houzeo_logo.png" alt="Houzeo" class="h-7" />
 
-          <!-- Profile Icon -->
           <button class="p-2">
             <svg id='Interface_User_Circle_20' width='26' height='26' viewBox='0 0 20 20'
               xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
               <rect width='20' height='20' stroke='none' fill='#000000' opacity='0' />
-
-
               <g transform="matrix(1.14 0 0 1.14 10 10)">
                 <g style="">
                   <g transform="matrix(1 0 0 1 0 -1.5)">
@@ -211,6 +210,19 @@
             </svg>
           </button>
         </div>
+
+        <div v-show="isMobileMenuOpen"
+          class="md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-3 text-sm animate-slideDown absolute w-full shadow-lg">
+          <a href="#" class="block hover:text-sky-700">How Houzeo Works</a>
+          <a href="#" class="block hover:text-sky-700">Reviews</a>
+          <a href="#" class="block hover:text-sky-700">Pricing</a>
+
+          <button class="w-full mt-3 bg-gradient-to-r from-sky-600 to-sky-800
+    hover:from-sky-500 hover:to-sky-700 text-white py-2 rounded-md">
+            Start Free Listing
+          </button>
+        </div>
+
   </header>
 </template>
 
@@ -218,6 +230,7 @@
 import { ref } from 'vue'
 
 const activeDropdown = ref(null)
+const isMobileMenuOpen = ref(false)
 
 const toggleDropdown = (name) => {
   activeDropdown.value =
