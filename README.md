@@ -1,38 +1,17 @@
 # houzeo-darshan-assigment
 
-This template should help get you started developing with Vue 3 in Vite.
+Hello there, this project is done using Vue Js and Talwind CSS.
 
-## Recommended IDE Setup
+Key Features: 
+ - Fully Responsive in Both Desktop and Mobile view
+ - Made with chunks of components for Header, Filter, Card
+ - Added animation, hover effects and all stuff needed for better UI
+ - Functional Hamburger menu
+ - Filter Select Dropdown with all other dropdwown with all hover effects
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+ Here are Screenshots:
+ <img width="1369" height="849" alt="image" src="https://github.com/user-attachments/assets/90b2b47a-c65e-4055-947e-986373a86c79" />
 
-## Recommended Browser Setup
+ <img width="387" height="841" alt="image" src="https://github.com/user-attachments/assets/97023126-b0e4-4c07-be01-a16298e8a816" />
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+   
